@@ -1,14 +1,46 @@
+:root {
+  --light-text-color: #ffffff;
+  --grey-text-color: #9da4bd;
+  --dark-headers-color: #303030;
+  --dark-text-color: #555555;
+}
+
 body {
-  font-family: "Open-Sans", sans-serif;
+  font-family: 'Open-Sans', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: grey;
 }
 
 .header-btn {
-  font-family: "Open-Sans", sans-serif;
+  font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--light-text-color);
+}
+
+.header-list-link {
+  color: var(--light-text-color);
+}
+
+.header-tel {
+  color: var(--light-text-color);
 }
