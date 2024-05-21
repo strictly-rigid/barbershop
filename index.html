@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
-        <nav>
+        <nav class="navigation">
           <a href="">
             <img
               src="./images/logo.svg"
@@ -30,15 +30,37 @@
               height="55"
             />
           </a>
-          <ul class="list">
-            <li><a class="header-list-link" href="">About</a></li>
-            <li><a class="header-list-link" href="">Services and prices</a></li>
-            <li><a class="header-list-link" href="">Barbers</a></li>
-            <li><a class="header-list-link" href="">Contacts</a></li>
-          </ul>
-          <div>
-            <a class="header-tel" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button type="button" class="btn">Online-booking</button>
+          <div class="nav-container">
+            <ul class="header-list list">
+              <li class="header-list-item">
+                <a class="header-list-link" href="#descritpion">About</a>
+              </li>
+              <li class="header-list-item">
+                <a class="header-list-link" href="#prices"
+                  >Services and prices</a
+                >
+              </li>
+              <li class="header-list-item">
+                <a class="header-list-link" href="#barbers">Barbers</a>
+              </li>
+              <li class="header-list-item">
+                <a class="header-list-link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+            <ul class="header-contacts">
+              <li>
+                <a class="header-tel" href="tel:+380441111111"
+                  >+38 044 111 11 11</a
+                >
+              </li>
+              <li><button type="button" class="btn">Online-booking</button></li>
+            </ul>
+            <!-- <div class="header-contacts">
+              <a class="header-tel" href="tel:+380441111111"
+                >+38 044 111 11 11</a
+              >
+              <button type="button" class="btn">Online-booking</button>
+            </div> -->
           </div>
         </nav>
       </div>
@@ -80,7 +102,7 @@
       </section>
 
       <!--SECTION DESCRIPTION-->
-      <section class="description">
+      <section class="description" id="descritpion">
         <div class="container">
           <ul class="list">
             <li>
@@ -119,7 +141,7 @@
       </section>
 
       <!--SECTION PRICES-->
-      <section class="prices">
+      <section class="prices" id="prices">
         <div class="container">
           <p class="prices-pre-title pre-title">
             Spend your time with the best masters
@@ -205,7 +227,7 @@
       </section>
 
       <!--SECTION OUR BARBERS-->
-      <section class="barbers">
+      <section class="barbers" id="barbers">
         <div class="container">
           <p class="pre-title">For true enjoyers of the atmosphere</p>
           <h2 class="barbers-title title">Our barbers</h2>
@@ -291,7 +313,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="contacts">
         <div class="container">
           <h2>Contacts</h2>
           <address>

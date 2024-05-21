@@ -103,6 +103,7 @@ header {
 }
 
 .header-tel {
+  margin-right: 43px;
   text-transform: uppercase;
 }
 
@@ -140,6 +141,38 @@ header {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+}
+
+/* ----------------- HEADER ----------------- */
+.navigation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header-list {
+  display: flex;
+  margin-left: 131px;
+}
+
+.header-list-link {
+  display: block;
+}
+
+.header-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .main-header {
@@ -255,6 +288,7 @@ header {
 }
 
 .barbers-text {
+  margin-bottom: 30px;
   font-size: 14px;
 
   line-height: calc(19 / 14);
@@ -262,7 +296,6 @@ header {
   letter-spacing: 0.02em;
 
   color: var(--accent-color);
-  margin-bottom: 30px;
 }
 
 .barbers-img {
