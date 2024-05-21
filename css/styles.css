@@ -4,6 +4,7 @@
   --secondary-text-color: #555555;
   --third-text-color: #ffffff;
   --accent-color: #ff6c00;
+  --background-color: #f7f7f7;
 }
 
 body {
@@ -11,11 +12,29 @@ body {
   background-color: var(--third-text-color);
 }
 
-ul {
+.list {
   margin: 0;
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
 li {
   list-style: none;
 }
@@ -39,7 +58,17 @@ a {
 }
 
 header {
+  padding-top: 32px;
+  padding-bottom: 32px;
   background-color: grey;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -58,6 +87,7 @@ header {
 }
 
 .header-list-link,
+.hero-link,
 .header-tel {
   font-weight: 600;
   font-size: 12px;
@@ -67,6 +97,7 @@ header {
 }
 
 .header-list-link:is(:hover, :focus),
+.hero-link:is(:hover, :focus),
 .header-tel:is(:hover, :focus) {
   color: var(--accent-color);
 }
@@ -81,6 +112,8 @@ header {
   line-height: calc(15 / 11);
   text-transform: uppercase;
   color: var(--headers-color);
+
+  margin-bottom: 20px;
 }
 
 .title {
@@ -90,6 +123,7 @@ header {
   letter-spacing: 0.05em;
 
   color: var(--headers-color);
+  margin-bottom: 20px;
 }
 
 .pre-text {
@@ -98,6 +132,7 @@ header {
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  margin-bottom: 20px;
 }
 
 .text {
@@ -115,8 +150,73 @@ header {
   color: red;
 }
 
+.hero-pre-title {
+  margin-bottom: 20px;
+}
+
+.main-header {
+  margin-bottom: 20px;
+}
+
+.description {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.descritpion-text {
+  margin-bottom: 42px;
+}
+
+/* ----------------- PRICES ----------------- */
+.prices {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
+}
+
+.prices-title {
+  margin-bottom: 44px;
+}
+
+.prices-list {
+  margin-bottom: 44px;
+}
+
+.prices-item-text {
+  color: var(--primary-text-color);
+}
+
+/* ----------------- BENEFITS ----------------- */
+
+.benefits {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  background-color: var(--background-color);
+}
+
+.benefits-item > span {
+  display: block;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc (57/42);
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--headers-color);
+}
+
+.benefits-item-text {
+  text-align: center;
+  text-transform: none;
+  margin: 0;
 }
 
 .benefits-text {
@@ -125,4 +225,46 @@ header {
   letter-spacing: 0.02em;
 
   color: var(--secondary-text-color);
+}
+
+/* ----------------- BARBERS ----------------- */
+
+.barbers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.barbers-list {
+  display: flex;
+}
+
+.barbers-title {
+  margin-bottom: 44px;
+}
+
+.barbers-name {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--headers-color);
+
+  margin-bottom: 8px;
+}
+
+.barbers-text {
+  font-size: 14px;
+
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.barbers-img {
+  margin-bottom: 30px;
 }
