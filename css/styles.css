@@ -28,8 +28,19 @@ p {
   margin-bottom: 0;
 }
 
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
 img {
   display: block;
+}
+
+button {
+  cursor: pointer;
 }
 
 address {
@@ -71,7 +82,14 @@ header {
   margin: 0 auto;
 }
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .btn {
+  min-width: 160px;
+  height: 40px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -79,8 +97,8 @@ header {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--third-text-color);
-  background-color: inherit;
-  padding: 12px 20px;
+  background-color: transparent;
+  /* padding: 12px 20px; */
 
   border: 1px solid var(--accent-color);
   border-radius: 25px;
@@ -176,6 +194,7 @@ header {
 }
 
 .main-header {
+  margin-bottom: 20px;
   font-family: 'Raleway';
   font-size: 72px;
   line-height: calc(85 / 72);
@@ -183,17 +202,46 @@ header {
   color: red;
 }
 
+/* ----------------- HERO ----------------- */
+
+.hero-container {
+  display: flex;
+}
+
+.hero-list {
+  width: 100px;
+}
+
+.hero-wrapper {
+  background-color: teal;
+  flex-grow: 1;
+  padding: 208px 100px;
+}
+
 .hero-pre-title {
   margin-bottom: 20px;
 }
 
-.main-header {
-  margin-bottom: 20px;
+.hero-text {
+  max-width: 360px;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+/* ----------------- DESCRIPTION ----------------- */
+
+.description-container {
+  display: flex;
+  gap: 30px;
 }
 
-.description {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.description-list {
+  display: flex;
+  gap: 30px;
+}
+.description-wrapper {
+  max-width: 470px;
 }
 
 .descritpion-text {
@@ -201,9 +249,11 @@ header {
 }
 
 /* ----------------- PRICES ----------------- */
-.prices {
-  padding-top: 120px;
-  padding-bottom: 120px;
+
+.prices-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
 }
 
 .prices-pre-title {
@@ -215,19 +265,28 @@ header {
 }
 
 .prices-list {
-  margin-bottom: 44px;
+  width: calc((100% - 30px) / 2);
+}
+
+.prices-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item + .prices-item {
+  margin-top: 20px;
 }
 
 .prices-item-text {
   color: var(--primary-text-color);
 }
 
-/* ----------------- BENEFITS ----------------- */
-
-.benefits {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.prices-btn {
+  display: block;
+  margin: 0 auto;
 }
+
+/* ----------------- BENEFITS ----------------- */
 
 .benefits-item {
   width: 170px;
@@ -263,12 +322,16 @@ header {
 /* ----------------- BARBERS ----------------- */
 
 .barbers {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  background-color: var(--background-color);
 }
 
+.barbers-card {
+  flex-basis: calc(100%-60px) / 3;
+}
 .barbers-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .barbers-title {
@@ -298,6 +361,22 @@ header {
   color: var(--accent-color);
 }
 
-.barbers-img {
-  margin-bottom: 30px;
+.barbers-card-content-wrapper {
+  padding-top: 30px;
+}
+
+/* ----------------- GALLERY ----------------- */
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallery-item {
+  flex-basis: calc(100%-90px) / 4;
+}
+
+.gallery-pre-title {
+  margin-bottom: 44px;
 }
