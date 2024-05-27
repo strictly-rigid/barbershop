@@ -53,7 +53,7 @@
                   >+38 044 111 11 11</a
                 >
               </li>
-              <li><button type="button" class="btn">Online-booking</button></li>
+              <li><button type="button" class="btn" data-modal-open>Online-booking</button></li>
             </ul>
             <!-- <div class="header-contacts">
               <a class="header-tel" href="tel:+380441111111"
@@ -91,7 +91,9 @@
           </ul>
 
           <div class="hero-wrapper">
-            <p class="hero-pre-title pre-title">A hair salon for men in Kyiv</p>
+            <p class="pre-title hero-pre-title pre-title-theme-light">
+              A hair salon for men in Kyiv
+            </p>
             <h1 class="main-header">BarberShop</h1>
             <p class="hero-text">
               We are experts in trendy men’s haircuts. We work quickly,
@@ -123,7 +125,7 @@
             </li>
           </ul>
           <div class="description-wrapper">
-            <p class="pre-title">About</p>
+            <p class="pre-title pre-title-theme-dark">About</p>
             <h2 class="title">Best Barbershop in your city</h2>
             <p class="pre-text">
               If you want to add more confidence to your image, you should
@@ -136,7 +138,7 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button type="button" class="btn">Online-booking</button>
+            <button type="button" class="btn" data-modal-open>Online-booking</button>
           </div>
         </div>
       </section>
@@ -144,7 +146,7 @@
       <!--SECTION PRICES-->
       <section class="prices section" id="prices">
         <div class="container">
-          <p class="prices-pre-title pre-title">
+          <p class="pre-title pre-title-theme-light">
             Spend your time with the best masters
           </p>
           <h2 class="prices-title title">Services and prices</h2>
@@ -196,8 +198,8 @@
       </section>
 
       <!--SECTION BENEFITS-->
-      <section class="benefits section">
-        <div class="container">
+      <section class="benefits-section section">
+        <div class="container benefits-container">
           <ul class="benefits-list list">
             <li class="benefits-item">
               <span>600</span>
@@ -222,19 +224,23 @@
               </p>
             </li>
           </ul>
-          <p class="pre-title">Old traditional school</p>
-          <h2 class="title">¿Why people come to us?</h2>
-          <p class="benefits-text text">
-            Only good things are said about us. But it's better to see and feel
-            1 time than read 10 times.
-          </p>
+          <div class="benefits-wrapper">
+            <p class="pre-title pre-title-theme-dark">Old traditional school</p>
+            <h2 class="title">¿Why people come to us?</h2>
+            <p class="benefits-text text">
+              Only good things are said about us. But it's better to see and
+              feel 1 time than read 10 times.
+            </p>
+          </div>
         </div>
       </section>
 
       <!--SECTION OUR BARBERS-->
       <section class="barbers section" id="barbers">
         <div class="container">
-          <p class="pre-title">For true enjoyers of the atmosphere</p>
+          <p class="pre-title pre-title-theme-dark">
+            For true enjoyers of the atmosphere
+          </p>
           <h2 class="barbers-title title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-card">
@@ -248,6 +254,56 @@
               <div class="barbers-card-content-wrapper">
                 <h3 class="barbers-name">John Smith</h3>
                 <p class="barbers-text">Extreme Barber</p>
+                <ul class="barbers-social-list list">
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://www.instagram.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://x.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://www.facebook.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://www.linkedin.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="barbers-card">
@@ -261,6 +317,56 @@
               <div class="barbers-card-content-wrapper">
                 <h3 class="barbers-name">Michele Doe</h3>
                 <p class="barbers-text">Extreme Barber</p>
+                <ul class="barbers-social-list list">
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://www.instagram.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://x.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://www.facebook.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://www.linkedin.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="barbers-card">
@@ -274,6 +380,56 @@
               <div class="barbers-card-content-wrapper">
                 <h3 class="barbers-name">Alan Black</h3>
                 <p class="barbers-text">Extreme Barber</p>
+                <ul class="barbers-social-list list">
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://www.instagram.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://x.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://www.facebook.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="barbers-social-item">
+                    <a
+                      href="https://www.linkedin.com/"
+                      class="barbers-social-link link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="barbers-social-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -283,7 +439,7 @@
       <!--SECTION GALLERY-->
       <section class="gallery section">
         <div class="container">
-          <p class="gallery-pre-title pre-title">
+          <p class="pre-title gallery-pre-title pre-title-theme-dark">
             In Latin, "barba" means "beard"
           </p>
           <h2 class="visually-hidden">Gallery</h2>
@@ -324,32 +480,75 @@
         </div>
       </section>
 
-      <section id="contacts">
-        <div class="container">
-          <h2>Contacts</h2>
-          <address>
-            <ul class="list">
-              <li>
-                <a
-                  href="https://maps.app.goo.gl/9spTsCqLDmY1iRoV7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >st. Vasilkivska, 7A Kyiv, 08132</a
-                >
-              </li>
-              <li>
-                <a href="tel:+380441111111">+38 044 111 11 11</a>
-              </li>
-              <li>
-                <a href="mailto:barbershop@email.com">barbershop@email.com</a>
-              </li>
-            </ul>
-          </address>
-          <p class="pre-title">Working hours</p>
-          <p>Every day from 9:00 to 22:00</p>
+      <!--SECTIONS CONTACTS-->
+      <div class="contact-wrapper">
+        <div class="container contact-container">
+          <section class="online-section">
+            <h2 class="title contact-title">Online-booking</h2>
+          </section>
+          <section class="contacts-section">
+            <h2 class="title contact-title">Contacts</h2>
+            <address>
+              <ul class="list">
+                <li>
+                  <a
+                    href="https://maps.app.goo.gl/9spTsCqLDmY1iRoV7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >st. Vasilkivska, 7A Kyiv, 08132</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+380441111111">+38 044 111 11 11</a>
+                </li>
+                <li>
+                  <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+                </li>
+              </ul>
+            </address>
+            <p class="pre-title">Working hours</p>
+            <p>Every day from 9:00 to 22:00</p>
+          </section>
         </div>
-      </section>
+      </div>
     </main>
-    <footer></footer>
+
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p class="copyright">&#xa9; Copyright 2020</p>
+        <ul class="hero-list list">
+            <li class="hero-item">
+              <a
+                class="hero-link link"
+                href=""
+                target="_blank"
+                rel="noreferrer noopener"
+                >Instagram</a
+              >
+            </li>
+            <li class="hero-item">
+              <a
+                class="hero-link link"
+                href=""
+                target="_blank"
+                rel="noreferrer noopener"
+                >Youtube</a
+              >
+            </li></div>
+    </footer>
+
+
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-modal"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
