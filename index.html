@@ -53,7 +53,11 @@
                   >+38 044 111 11 11</a
                 >
               </li>
-              <li><button type="button" class="btn" data-modal-open>Online-booking</button></li>
+              <li>
+                <button type="button" class="btn" data-modal-open>
+                  Online-booking
+                </button>
+              </li>
             </ul>
             <!-- <div class="header-contacts">
               <a class="header-tel" href="tel:+380441111111"
@@ -69,26 +73,28 @@
       <!--SECTION HERO-->
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noreferrer noopener"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noreferrer noopener"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
 
           <div class="hero-wrapper">
             <p class="pre-title hero-pre-title pre-title-theme-light">
@@ -138,7 +144,9 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button type="button" class="btn" data-modal-open>Online-booking</button>
+            <button type="button" class="btn light-bg-btn" data-modal-open>
+              Online-booking
+            </button>
           </div>
         </div>
       </section>
@@ -202,26 +210,21 @@
         <div class="container benefits-container">
           <ul class="benefits-list list">
             <li class="benefits-item">
-              <span>600</span>
-              <p class="pre-title benefits-item-text">
-                Satisfied customers per day
-              </p>
+              <span class="benefits-number">600</span>
+              <p class="benefits-item-text">Satisfied customers per day</p>
             </li>
             <li class="benefits-item">
-              <span>20</span>
-              <p class="pre-title benefits-item-text">Kyiv’s best barbers</p>
+              <span class="benefits-number">50</span>
+              <p class="benefits-item-text">Awards for excellent service</p>
             </li>
             <li class="benefits-item">
-              <span>50</span>
-              <p class="pre-title benefits-item-text">
-                Awards for excellent service
-              </p>
+              <span class="benefits-number">20</span>
+              <p class="benefits-item-text">Kyiv’s best barbers</p>
             </li>
+
             <li class="benefits-item">
-              <span>100</span>
-              <p class="pre-title benefits-item-text">
-                Gifts for regular customers
-              </p>
+              <span class="benefits-number">100</span>
+              <p class="benefits-item-text">Gifts for regular customers</p>
             </li>
           </ul>
           <div class="benefits-wrapper">
@@ -484,30 +487,96 @@
       <div class="contact-wrapper">
         <div class="container contact-container">
           <section class="online-section">
-            <h2 class="title contact-title">Online-booking</h2>
+            <h2 class="title form-title">Online-booking</h2>
+            <form class="online-form">
+              <div class="online-field">
+                <input
+                  type="text"
+                  name="user_name"
+                  id="user_name"
+                  class="form-input form-item"
+                  pattern="[a-zA-Zа-яА-Я]+"
+                  required
+                  placeholder=" "
+                />
+                <label for="user_name" class="online-label">Name*</label>
+              </div>
+
+              <div class="online-field">
+                <input
+                  type="tel"
+                  name="user_phone"
+                  id="user_phone"
+                  class="form-input form-item"
+                  pattern="^[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  title="XXX-XXX-XX-XX"
+                  required
+                  placeholder=" "
+                />
+                <label for="user_phone" class="online-label">Phone*</label>
+              </div>
+
+              <div class="online-field online-field-text">
+                <textarea
+                  class="form-message form-item"
+                  name="user_message"
+                  id="user_message"
+                  placeholder=" "
+                ></textarea>
+                <label for="user_message" class="online-label">Message</label>
+              </div>
+              <button class="btn" type="submit">Send</button>
+            </form>
           </section>
           <section class="contacts-section">
             <h2 class="title contact-title">Contacts</h2>
-            <address>
+            <address class="address">
               <ul class="list">
-                <li>
+                <li class="contacts-item">
+                  <svg class="contacts-icon" width="24" height="24">
+                    <use
+                      class="contacts-vector"
+                      href="./images/icons.svg#map"
+                    ></use>
+                  </svg>
                   <a
                     href="https://maps.app.goo.gl/9spTsCqLDmY1iRoV7"
+                    class="contacts-link contacts-link-address"
                     target="_blank"
                     rel="noopener noreferrer"
                     >st. Vasilkivska, 7A Kyiv, 08132</a
                   >
                 </li>
-                <li>
-                  <a href="tel:+380441111111">+38 044 111 11 11</a>
+                <li class="contacts-item">
+                  <svg class="contacts-icon" width="24" height="24">
+                    <use
+                      class="contacts-vector"
+                      href="./images/icons.svg#phone"
+                    ></use>
+                  </svg>
+                  <a href="tel:+380441111111" class="contacts-link"
+                    >+38 044 111 11 11</a
+                  >
                 </li>
-                <li>
-                  <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+                <li class="contacts-item">
+                  <svg class="contacts-icon" width="24" height="24">
+                    <use
+                      class="contacts-vector"
+                      href="./images/icons.svg#mail"
+                    ></use>
+                  </svg>
+                  <a
+                    href="mailto:barbershop@email.com"
+                    class="contacts-link contacts-link-mail"
+                    >barbershop@email.com</a
+                  >
                 </li>
               </ul>
             </address>
-            <p class="pre-title">Working hours</p>
-            <p>Every day from 9:00 to 22:00</p>
+            <p class="pre-title contacts-pre-title">Working hours</p>
+            <p class="benefits-text contacts-text">
+              Every day from 9:00 to 22:00
+            </p>
           </section>
         </div>
       </div>
@@ -517,29 +586,30 @@
     <footer class="footer">
       <div class="container footer-container">
         <p class="copyright">&#xa9; Copyright 2020</p>
-        <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noreferrer noopener"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noreferrer noopener"
-                >Youtube</a
-              >
-            </li></div>
+        <ul class="footer-list list">
+          <li class="hero-item">
+            <a
+              class="hero-link link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Instagram</a
+            >
+          </li>
+          <li class="hero-item">
+            <a
+              class="hero-link link"
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Youtube</a
+            >
+          </li>
+        </ul>
+      </div>
     </footer>
 
-
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-btn-icon" width="8" height="8">

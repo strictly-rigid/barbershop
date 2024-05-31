@@ -89,7 +89,7 @@ a {
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.33;
+  line-height: calc(16 / 12);
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--third-text-color);
@@ -107,7 +107,6 @@ a {
 }
 
 .header-list-link,
-.hero-link,
 .header-tel {
   font-weight: 600;
   font-size: 12px;
@@ -195,6 +194,7 @@ a {
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
+  padding-right: 17px;
 }
 
 .navigation {
@@ -234,17 +234,13 @@ a {
   font-size: 72px;
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
-  color: red;
+  color: var(--third-text-color);
 }
 
 /* ----------------- HERO ----------------- */
 
 .hero-container {
   display: flex;
-}
-
-.hero-list {
-  width: 100px;
 }
 
 .hero-wrapper {
@@ -258,6 +254,22 @@ a {
   background-size: cover;
   flex-grow: 1;
   padding: 208px 100px;
+}
+
+.hero-soc {
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
 }
 
 .hero-pre-title {
@@ -277,12 +289,11 @@ a {
   display: block;
   width: 60px;
   height: 1px;
-  margin-right: 40px;
   background-color: currentColor;
-  /* background-color: var(--headers-color); */
 }
 
 .hero-link {
+  font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
 
@@ -292,6 +303,7 @@ a {
   /* 
   transform: rotate(-90deg); */
 }
+
 /* ----------------- DESCRIPTION ----------------- */
 
 .description-container {
@@ -311,6 +323,16 @@ a {
   margin-bottom: 42px;
 }
 
+.btn.light-bg-btn {
+  color: var(--headers-color);
+  transition: color var(--transition-dur-and-func),
+    background-color var(--transition-dur-and-func);
+}
+
+.btn.light-bg-btn:is(:hover, :focus) {
+  color: var(--third-text-color);
+  background-color: var(--accent-color);
+}
 /* ----------------- PRICES ----------------- */
 
 .prices {
@@ -331,6 +353,7 @@ a {
 
 .prices-title {
   margin-bottom: 44px;
+  color: var(--third-text-color);
 }
 
 .prices-list {
@@ -416,7 +439,8 @@ a {
   background-color: var(--background-color);
 }
 
-.benefits-item > span {
+.benefits-number {
+  position: relative;
   display: block;
   font-weight: 700;
   font-size: 42px;
@@ -427,8 +451,9 @@ a {
 }
 
 .benefits-item > span::after {
+  position: absolute;
   content: '+';
-
+  top: 2px;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
@@ -451,6 +476,13 @@ a {
   text-align: center;
   text-transform: none;
   margin: 0;
+  margin-top: 6px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+
+  color: var(--headers-color);
 }
 
 .benefits-text {
@@ -567,13 +599,82 @@ a {
   display: flex;
 }
 
-.contact-title {
+.online-section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  padding-right: 30px;
+  width: calc(50% + 15px);
+}
+
+.online-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.online-field {
+  position: relative;
+  margin-bottom: 44px;
+}
+
+.online-field-text {
+  width: 100%;
+}
+
+.online-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+
+  transition: transform var(--transition-dur-and-func);
+}
+
+.form-title {
+  margin-bottom: 44px;
   color: var(--third-text-color);
 }
 
-.online-section {
-  padding-top: 130px;
-  width: calc(50% + 15px);
+.form-item {
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  background-color: transparent;
+  transition: border-color var(--transition-dur-and-func);
+  color: var(--third-text-color);
+}
+
+.form-item:focus {
+  border-color: var(--third-text-color);
+}
+
+.form-item:focus + .online-label {
+  transform: translateY(-100%);
+  color: var(--third-text-color);
+}
+.form-item:not(:placeholder-shown) + .online-label {
+  transform: translateY(-100%);
+  color: var(--third-text-color);
+}
+
+.form-input {
+  width: 270px;
+  height: 24px;
+}
+
+.form-message {
+  width: 100%;
+  height: 76px;
+  resize: none;
+}
+
+.contact-title {
+  margin-bottom: 40px;
+  color: var(--third-text-color);
 }
 
 .contacts-section {
@@ -581,6 +682,85 @@ a {
   padding-bottom: 120px;
   padding-left: 100px;
   width: calc(50% - 15px);
+  /* width: 300px; */
+}
+
+.contacts-link {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  transition: color var(--transition-dur-and-func);
+}
+
+.contacts-pre-title {
+  color: var(--third-text-color);
+}
+
+.contacts-text {
+  color: var(--primary-text-color);
+}
+
+.contacts-item {
+  display: flex;
+  width: 230px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-item:last-child {
+  margin-bottom: 70px;
+}
+
+.contacts-link-address {
+  font-weight: 700;
+}
+
+.contacts-link-mail {
+  text-decoration: underline;
+}
+
+.contacts-icon {
+  margin-right: 16px;
+}
+
+/* ----------------- FOOTER ----------------- */
+footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  /* align-items: center;
+  gap: 40px;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left; */
+}
+
+.footer-list::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+  color: var(--primary-text-color);
 }
 
 /* ----------------- MODAL ----------------- */
@@ -610,10 +790,14 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 576px;
+  min-height: 576px;
   background-color: var(--background-color);
+  transition: transform var(--transition-dur-and-func);
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
 .modal-close-btn {
   position: absolute;
   top: 24px;
